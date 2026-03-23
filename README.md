@@ -44,3 +44,19 @@ http://localhost:3000/api/v2/seed
 - NestJS
 - Mongoose
 - Axios (@nestjs/axios)
+
+# Production Build
+
+1. Crear el archivo `.env.prod` y configurar las variables de entorno
+
+2. Ejecutar el siguiente comando para crear la imagen de Docker
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+3. Luego, si quieres levantar la aplicación sin reconstruir la imagen, ejecuta el siguiente comando
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
